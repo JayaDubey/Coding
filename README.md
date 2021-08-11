@@ -1,2 +1,2 @@
 # Coding
-Solved Problems from Codeforces, Codechef platforms
+Solving Problems from Codeforces, Codechef platforms
