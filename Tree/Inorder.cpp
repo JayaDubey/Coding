@@ -22,13 +22,13 @@ public:
         TreeNode* currNode = root;
         while(currNode != NULL || !st.empty()){
             while(currNode != NULL){
-                st.push(currNode);
-                currNode = currNode->left;
+                st.push(currNode); //push the root 
+                currNode = currNode->left;//and all left nodes of the main root
             }
             currNode = st.top();
             st.pop();
-            ans.push_back(currNode->val);
-            currNode = currNode->right;
+            ans.push_back(currNode->val);//add left nodes first by poping elemnts one by one then add root node
+            currNode = currNode->right;//if the current left node has any right node then shift the currNode to right node
         }
         return ans;
     }
