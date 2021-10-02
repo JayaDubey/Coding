@@ -1,4 +1,5 @@
 //Preorder
+//TC = O(n) SC = O(n) [n = number of nodes (worst case occurs in a skewed tree) 
 class Solution {
 public: //recursive
     void recur(TreeNode* root, vector<int> &res){
@@ -44,7 +45,7 @@ public:
             preorder.push_back(curr->val);
             if (curr->right != NULL)
                 stack.push(curr->right);
-            if (curr->left != NULL)
+            if (curr->left != NULL) //left is inserted at the last so that it appears before right node
                 stack.push(curr->left);
         }
         return preorder;
